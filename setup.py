@@ -19,9 +19,10 @@ setup(
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
-    entry_points={
-        'console_scripts': [
-            'mover_node = simple_mover.mover_node:main'
-        ],
-    },
+entry_points={
+    'console_scripts': [
+        'mover_node = simple_mover.mover_node:main',
+        'inverse_kinematics_node = simple_mover.inverse_kinematics_node:main',
+    ],
+},
 )
