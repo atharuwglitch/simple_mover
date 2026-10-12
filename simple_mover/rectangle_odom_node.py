@@ -1,6 +1,3 @@
-upload ini ke github ya
-
-
 import math
 import time
 
@@ -11,8 +8,8 @@ from sensor_msgs.msg import JointState
 
 class RectangleOdomNode(Node):
 
-    def __init__(self):
-        super().__init__('rectangle_odom_node')
+    def _init_(self):
+        super()._init_('rectangle_odom_node')
 
         self.cmd_pub = self.create_publisher(Twist, 'cmd_vel', 10)
         self.create_subscription(JointState, 'joint_states', self.joint_callback, 10)
@@ -160,6 +157,6 @@ def main(args=None):
             rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()
 EOF
